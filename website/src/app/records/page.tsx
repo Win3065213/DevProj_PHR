@@ -28,7 +28,7 @@ export default function Records() {
 
   return (
     <div className="flex w-dvw">
-      <aside className="hidden md:block w-[38%]">
+      <aside className="hidden lg:block w-[38%]">
         <Navbar side={true} />
       </aside>
       <main className=" carousel carousel-center
@@ -36,7 +36,7 @@ export default function Records() {
                         after:content-[''] after:min-w-[200px]
                         transparent-sides
                         flex max-w-2xl space-x-16
-                        mx-auto md:mx-0 mt-3 p-4">
+                        mx-auto lg:mx-0 mt-3 p-4">
         {consultations.map((cons) => {
           const recordCounts = { note: 0, lab: 0 }; // Initialize counts
 
@@ -76,8 +76,8 @@ export default function Records() {
                 </div>
               </div>
 
-              <div className=" rounded-md px-5 py-3
-                          bg-gray-300">
+              <div className="rounded-md px-5 py-3
+                            bg-gray-300">
                 <h1 className="text-xl font-semibold mb-2">Number of Records</h1>
                 <section className="grid grid-cols-2 divide-x-2 divide-slate-100">
                   <div className="flex flex-col items-center">
