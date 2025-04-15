@@ -16,8 +16,8 @@ function setCookie(value: string, maxAge: number): void {
 }
 
 function getCookie(): string | null {
-    let name = `${USER_DATA_KEY}=`;
-    let ca = document.cookie.split(';');
+    const name = `${USER_DATA_KEY}=`;
+    const ca = document.cookie.split(';');
     for (let i = 0; i < ca.length; i++) {
         let c = ca[i];
         while (c.charAt(0) == ' ') {

@@ -19,7 +19,7 @@ export default function Records() {
   //     records: []
   //   }
   // ];
-  let consultations = mockConsultations;
+  const consultations = mockConsultations;
 
   function formatDate(isoDate: string): string {
     const date = new Date(isoDate);

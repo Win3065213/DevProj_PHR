@@ -3,7 +3,7 @@ interface NavbarProps {
 }
 
 export default function Navbar({ side }: NavbarProps) {
-    let navElements = [
+    const navElements = [
         {
             name: "Home",
             href: "..",

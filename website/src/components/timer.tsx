@@ -1,4 +1,4 @@
-import React, { ReactEventHandler, useEffect, useState } from "react"
+import React, { useEffect, useState } from "react"
 import { getFormattedTimeRemaining, updateExpiryTime } from "../utils/mockData/mockInfo"
 
 export default function Timer() {
