@@ -39,10 +39,10 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
-        <script
+        {/* <script
           crossOrigin="anonymous"
           src="//unpkg.com/react-scan/dist/auto.global.js"
-        />
+        /> */}
       </head>
       <body className="flex flex-col min-h-screen">
         <nav className="bg-[var(--phr)]">
