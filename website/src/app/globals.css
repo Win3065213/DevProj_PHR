@@ -1,8 +1,10 @@
 @import "tailwindcss";
+@plugin "daisyui";
 
 :root {
   --background: #ffffff;
   --foreground: #171717;
+  --phr: #3b82f6;
 }
 
 @theme inline {
@@ -12,15 +14,44 @@
   --font-mono: var(--font-geist-mono);
 }
 
-@media (prefers-color-scheme: dark) {
+/* @media (prefers-color-scheme: dark) {
   :root {
     --background: #0a0a0a;
     --foreground: #ededed;
   }
-}
+} */
 
 body {
   background: var(--background);
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
 }
+
+.bg-disabled:disabled {
+  background: #3b83f6cc !important;
+}
+
+.transparent-sides {
+  -webkit-mask-image: linear-gradient(to right, transparent, black 15%, black 85%, transparent);
+  mask-image: linear-gradient(to right, transparent, black 15%, black 85%, transparent);
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
+}
+
+/* ============ carousel =============== */
+/* Base styles for all carousel items */
+/* .carousel-item {
+  transform: scale(0.8);
+  opacity: 0.7;
+  transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out, z-index 0s 0.3s;  Add z-index transition delay
+  z-index: 1;
+} */
+
+/* Style for the targeted (active) slide */
+/* .carousel-item:focus {
+  transform: scale(1.1);
+  opacity: 100%;
+  z-index: 2;
+  transition-delay: 0s;   Remove z-index transition delay when active
+} */
+
