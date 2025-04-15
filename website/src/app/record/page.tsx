@@ -51,6 +51,7 @@ export default function RecordDetailPage() {
             <aside className="hidden md:block w-[38%]">
                 <Navbar side={true} />
             </aside>
+
             <main className='w-full md:w-[62%]'>
                 <h2><span className='font-bold'>Record Details for ID:</span> {consID}</h2>
                 {/* <pre>{JSON.stringify(records, null, 2)}</pre> */}
@@ -86,7 +87,6 @@ export default function RecordDetailPage() {
                     </section>
                 ))}
             </main>
-            
         </div>
     );
 }

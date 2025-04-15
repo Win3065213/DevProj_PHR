@@ -5,8 +5,7 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "start": "next start",
-    "lint": "next lint"
+    "start": "next start"
   },
   "dependencies": {
     "next": "15.2.4",
@@ -20,8 +19,6 @@
     "@types/react": "^19",
     "@types/react-dom": "^19",
     "daisyui": "^5.0.12",
-    "eslint": "^9",
-    "eslint-config-next": "15.2.4",
     "tailwindcss": "^4",
     "typescript": "^5"
   }
