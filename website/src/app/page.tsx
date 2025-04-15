@@ -7,7 +7,7 @@ export default function Home() {
         <Navbar side={true} />
       </aside>
       <main>
-        Fill research information here.
+        Home page.
       </main>
     </div>
   );

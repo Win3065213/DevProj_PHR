@@ -47,18 +47,29 @@ export default function RecordDetailPage() {
     }
 
     return (
-        <div className='flex px-10 py-5'>
-            <aside className="hidden md:block w-[38%]">
+        <div className='flex px-3 py-2 md:pr-10'>
+            <aside className="hidden lg:block w-[38%]">
                 <Navbar side={true} />
             </aside>
 
-            <main className='w-full md:w-[62%]'>
+            <main className='w-full lg:w-[62%]'>
+                <div className='w-fit my-2 px-3 py-2
+                                border rounded-md
+                                text-[var(--phr)]
+                                hover:bg-[var(--phr)] hover:text-white'>
+                    <a 
+                        className="before:content-['<_'] font-bold"
+                        href='/records'>
+                        Back to Record Page
+                    </a>
+                </div>
+
                 <h2><span className='font-bold'>Record Details for ID:</span> {consID}</h2>
                 {/* <pre>{JSON.stringify(records, null, 2)}</pre> */}
                 {records.map((rec) => (
-                    <section key={rec.id} className='my-3 p-5 rounded-2xl border-2 border-slate-200'>
+                    <section key={rec.id} className='my-3 p-3 md:p-5 rounded-2xl border-2 border-slate-200'>
                         {rec.type == "note" && (
-                            <div className='space-y-5'>
+                            <div className='space-y-3 md:space-y-5'>
                                 <div className="flex gap-2">
                                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--phr)" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="icon icon-tabler icons-tabler-outline icon-tabler-calendar-time"><path stroke="none" d="M0 0h24v24H0z" fill="none" /><path d="M11.795 21h-6.795a2 2 0 0 1 -2 -2v-12a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v4" /><path d="M18 18m-4 0a4 4 0 1 0 8 0a4 4 0 1 0 -8 0" /><path d="M15 3v4" /><path d="M7 3v4" /><path d="M3 11h16" /><path d="M18 16.496v1.504l1 1" /></svg>
                                     {formatDate(rec.date)}
@@ -72,7 +83,7 @@ export default function RecordDetailPage() {
                         )}
 
                         {rec.type == "lab" && (
-                            <div className='space-y-5'>
+                            <div className='space-y-3 md:space-y-5'>
                                 <div className="flex gap-2">
                                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--phr)" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="icon icon-tabler icons-tabler-outline icon-tabler-calendar-time"><path stroke="none" d="M0 0h24v24H0z" fill="none" /><path d="M11.795 21h-6.795a2 2 0 0 1 -2 -2v-12a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v4" /><path d="M18 18m-4 0a4 4 0 1 0 8 0a4 4 0 1 0 -8 0" /><path d="M15 3v4" /><path d="M7 3v4" /><path d="M3 11h16" /><path d="M18 16.496v1.504l1 1" /></svg>
                                     {formatDate(rec.date)}

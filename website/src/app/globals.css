@@ -31,11 +31,23 @@ body {
   background: #3b83f6cc !important;
 }
 
-.transparent-sides {
-  -webkit-mask-image: linear-gradient(to right, transparent, black 15%, black 85%, transparent);
-  mask-image: linear-gradient(to right, transparent, black 15%, black 85%, transparent);
-  -webkit-mask-repeat: no-repeat;
-  mask-repeat: no-repeat;
+
+@media (max-width:600px){
+  .unit {
+    display: none;
+  }
+  .sm-height {
+    height: 45px !important;
+  }
+}
+
+@media (min-width:500px){
+  .transparent-sides {
+    -webkit-mask-image: linear-gradient(to right, transparent, black 15%, black 85%, transparent);
+    mask-image: linear-gradient(to right, transparent, black 15%, black 85%, transparent);
+    -webkit-mask-repeat: no-repeat;
+    mask-repeat: no-repeat;
+  }
 }
 
 .sub::after {

@@ -73,20 +73,20 @@ export function ValueBar({
   }
 
   return (
-    <div className="w-full p-4 border-2 border-slate-200 rounded-lg shadow-sm">
+    <div className="w-full px-2 md:px-4 py-4 border-2 border-slate-200 rounded-lg shadow-sm">
       {title && (
         <div className="mb-2 flex justify-between items-center">
           <h3 className="font-semibold">{title}</h3>
-          <span className={`font-mono text-sm font-bold ${getSeverityTextColor()}`}>
+          <span className={`font-mono text-sm font-bold text-end ${getSeverityTextColor()}`}>
             {formatNumber(currentValue)}
             {unit} - {isNormal ? "Normal" : isMild ? "Slighly Elevated" : "Abnormal"}
           </span>
         </div>
       )}
 
-      {description && <p className="text-xs text-muted-foreground mb-3">{description}</p>}
-      <div className="px-3">
-      <div className="relative w-full" style={{ height: `${height}px` }}>
+      {description && <p className="text-xs text-muted-foreground mb-3">{description} ({unit})</p>}
+      <div className="px-2">
+      <div className="relative w-full sm-height" style={{ height: `${height}px` }}>
         {/* Color zones track - no white space between zones */}
         <div
           className="absolute w-full rounded-full top-7 -translate-y-1/2"
@@ -116,27 +116,33 @@ export function ValueBar({
         <div className="absolute w-full flex -bottom-2 text-xs">
           <div className="text-red-500 font-medium text-center -translate-x-1/2">
             {formatNumber(minPossible)}
-            {unit.length < 3 ? "" : <br/>}{unit}
+            {unit.length < 3 ? "" : <br/>}
+            <span className="unit">{unit}</span>
           </div>
           <div className="absolute text-amber-500 font-medium text-center -translate-x-1/2" style={{ left: `calc(${minMildPos}%)` }}>
             {formatNumber(minMild)}
-            {unit.length < 3 ? "" : <br/>}{unit}
+            {unit.length < 3 ? "" : <br/>}
+            <span className="unit">{unit}</span>
           </div>
           <div className="absolute text-green-600 font-medium text-center -translate-x-1/2" style={{ left: `calc(${minNormalPos}%)` }}>
             {formatNumber(minNormal)}
-            {unit.length < 3 ? "" : <br/>}{unit}
+            {unit.length < 3 ? "" : <br/>}
+            <span className="unit">{unit}</span>
           </div>
           <div className="absolute text-green-600 font-medium text-center -translate-x-1/2" style={{ left: `calc(${maxNormalPos}%)` }}>
             {formatNumber(maxNormal)}
-            {unit.length < 3 ? "" : <br/>}{unit}
+            {unit.length < 3 ? "" : <br/>}
+            <span className="unit">{unit}</span>
           </div>
           <div className="absolute text-amber-500 font-medium text-center -translate-x-1/2" style={{ left: `calc(${maxMildPos}%)` }}>
             {formatNumber(maxMild)}
-            {unit.length < 3 ? "" : <br/>}{unit}
+            {unit.length < 3 ? "" : <br/>}
+            <span className="unit">{unit}</span>
           </div>
           <div className="text-red-500 ml-auto font-medium text-center translate-x-1/2">
             {formatNumber(maxPossible)}
-            {unit.length < 3 ? "" : <br/>}{unit}
+            {unit.length < 3 ? "" : <br/>}
+            <span className="unit">{unit}</span>
           </div>
         </div>
 
