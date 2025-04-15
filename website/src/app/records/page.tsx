@@ -53,7 +53,7 @@ export default function Records() {
             <a
               key={cons.id}
               className=" carousel-item flex-col
-                          w-80 p-5 rounded-2xl
+                          w-80 h-fit p-5 rounded-2xl
                           border-2 border-slate-200"
               href={`/record/?id=${cons.id}`}
             >
