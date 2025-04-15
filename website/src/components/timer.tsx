@@ -19,8 +19,15 @@ export default function Timer() {
     const handleSetCustomTime = () => {
         document.getElementById("timer")?.focus();
         setIsTimerUpdating(true)
+        if (!customHours) {
+            setCustomHours(24)
+        }
+        if (customHours > 168) {
+            setCustomHours(168)
+        }
+
         setTimeout(() => {
-            updateExpiryTime(customHours)
+            updateExpiryTime(customHours ? (customHours > 168 ? 168 : customHours) : 24)
             setIsTimerUpdating(false)
         }, 1000)
     }
@@ -38,7 +45,7 @@ export default function Timer() {
                             w-80 px-4 py-2.5 mb-2
                             border border-slate-200 shadow-lg shadow-gray-500"
             >
-                <div className="grid gap-4">
+                <form className="grid gap-4">
                     <div className="space-y-2">
                         <h1 className="font-bold">Set custom expiry duration</h1>
                         <p className="text-sm text-muted-foreground">
@@ -55,11 +62,12 @@ export default function Timer() {
                             min="1"
                             max="168"
                             value={customHours}
-                            onChange={(e) => setCustomHours(Number.parseInt(e.target.value) || 24)}
+                            onChange={(e) => setCustomHours(Number.parseInt(e.target.value))}
                             className="col-span-2 ps-1.5 py-0.5 border border-gray-400 rounded-sm"
                         />
                     </div>
                     <button
+                        type="submit"
                         className=" btn border-0
                                     bg-[var(--phr)] bg-disabled"
                         onClick={handleSetCustomTime}
@@ -73,7 +81,7 @@ export default function Timer() {
                             "Update Timer"
                             )}
                     </button>
-                </div>
+                </form>
             </div>
         </div>
     )

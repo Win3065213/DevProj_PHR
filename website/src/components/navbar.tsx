@@ -34,7 +34,7 @@ export default function Navbar({ side }: NavbarProps) {
         },
         {
             name: "Survey",
-            href: "#",
+            href: "https://forms.office.com/e/Txu47fQzsD",
             sublink: []
         }
     ]
