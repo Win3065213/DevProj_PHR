@@ -52,7 +52,7 @@ export default function RecordDetailPage() {
                 <Navbar side={true} />
             </aside>
             <main className='w-full md:w-[62%]'>
-                <h2>Record Details for ID: {consID}</h2>
+                <h2><span className='font-bold'>Record Details for ID:</span> {consID}</h2>
                 {/* <pre>{JSON.stringify(records, null, 2)}</pre> */}
                 {records.map((rec) => (
                     <section key={rec.id} className='my-3 p-5 rounded-2xl border-2 border-slate-200'>
