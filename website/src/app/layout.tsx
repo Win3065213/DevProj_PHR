@@ -44,7 +44,7 @@ export default function RootLayout({
           src="//unpkg.com/react-scan/dist/auto.global.js"
         />
       </head>
-      <body className="flex flex-col">
+      <body className="flex flex-col min-h-screen">
         <nav className="bg-[var(--phr)]">
           <div className="flex items-center
                           py-5 px-14 sm:px-16 md:px-22 lg:px-28 xl:px-35">
