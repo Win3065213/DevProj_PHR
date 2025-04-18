@@ -61,6 +61,8 @@ export default function Home() {
             <li><b>About Project:</b> Details regarding project</li>
 
             <li><b>Survey:</b> Link to survey form for project (Will be replaced with research result after completion.)</li>
+
+            <li><b>Personal Info:</b> User's personal information page (containing mock user information, with a customisable timer to automatically delete the data after a set time)</li>
           </ol>
         </section>
       </main>
