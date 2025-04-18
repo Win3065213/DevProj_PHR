@@ -28,7 +28,7 @@ export default function Home() {
 
         <section>
           <h2 className="font-semibold text-xl">Disclaimer</h2>
-          <p>All data presented in this prototype is generated for research and demonstration purposes only. No real patient records are used. The interface is not intended for clinical or diagnostic use.</p>
+          <p>All data presented in this prototype is generated for research and demonstration purposes only. No real patient records are used. The interface is not intended for clinical or diagnostic use. Mock data will be stored on your device and automatically deleted after a set duration.</p>
         </section>
       </main>
     </div>
