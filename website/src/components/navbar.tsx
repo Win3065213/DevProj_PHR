@@ -28,8 +28,8 @@ export default function Navbar({ side }: NavbarProps) {
             ]
         },
         {
-            name: "Appointment",
-            href: "/appointments",
+            name: "About Project",
+            href: "/about",
             sublink: []
         },
         {
@@ -95,7 +95,7 @@ export default function Navbar({ side }: NavbarProps) {
                                         <div
                                             key={sub.name}
                                             className=" group/sub sublink w-full px-5 ml-7
-                                                        ease-in-out transition-[padding,margin,height] duration-1500 delay-500
+                                                        ease-in-out transition-[padding,margin,height] duration-1500 delay-300
                                                         bg-[#5b9aff] rounded-md">
                                             <a
                                                 className="
@@ -117,7 +117,7 @@ export default function Navbar({ side }: NavbarProps) {
                         {navElements.map((ele) => (
                             <a
                                 key={ele.name}
-                                className="text-white font-bold
+                                className="text-white font-bold text-center self-center
                                             transition duration-500 hover:drop-shadow-[0_0_1px_#555,0_0_7px_#eeef,0_0_15px_#eee5]"
                                 href={ele.href}
                             >
