@@ -24,7 +24,7 @@ export default function Home() {
           className=" md:row-span-2
                       lg:row-span-1 lg:col-span-2
                       xl:row-span-2 xl:col-span-1
-                      shadow-md rounded-2xl h-full"
+                      shadow-md rounded-2xl w-full max-w-[500px] justify-self-center self-center"
           src="/Home.png"
           draggable={false}
         />
