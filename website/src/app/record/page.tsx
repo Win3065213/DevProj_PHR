@@ -47,7 +47,7 @@ export default function RecordDetailPage() {
     }
 
     return (
-        <div className='flex px-3 py-2 md:pr-10'>
+        <div className='flex px-3 py-2 md:pr-5 lg:pr-10'>
             <aside className="hidden lg:block w-[38%]">
                 <Navbar side={true} />
             </aside>
