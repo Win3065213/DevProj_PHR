@@ -12,7 +12,7 @@ export default function Home() {
 
         <section className="md:col-span-2">
           <h2 className="font-semibold text-xl">Project Overview</h2>
-          <p>This prototype is part of a research project focused on evaluating the information management aspect in personal health records (PHRs). The aim is to enhance patient engagement, safety and health outcomes by identifying effective ways that support clarity, accessibility, and informed decision-making for patients.</p>
+          <p>This prototype is part of a research project focused on evaluating the information management aspect in personal health records (PHRs). The aim is to enhance patient engagement, safety and health outcomes by identifying effective ways to present medical information to users.</p>
         </section>
 
         <img
