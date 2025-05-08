@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react"
-import { getFormattedTimeRemaining, updateExpiryTime } from "../utils/mockData/mockInfo"
+import { getFormattedTimeRemaining, updateExpiryTime } from "../../utils/mockData/mockInfo"
 
 export default function Timer() {
     const [timeRemaining, setTimeRemaining] = useState("00:00:00")

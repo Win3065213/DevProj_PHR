@@ -1,7 +1,7 @@
 "use client"
 
 import "./globals.css";
-import Navbar from "@/components/navbar";
+import Navbar from "@/components/layout/navbar";
 import { useEffect, useState } from "react";
 import { getUserData, initializeUserData } from "../utils/mockData/mockInfo";
 
