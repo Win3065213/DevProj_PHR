@@ -1,7 +1,7 @@
 "use client"
 
-import { LabValueBar } from '@/components/elements/valueBar';
-import Navbar from '@/components/navbar';
+import { LabValueBar } from '@/components/record/elements/valueBar';
+import Navbar from '@/components/layout/navbar';
 import { mockConsultations, Record } from '@/utils/mockData/mockConsultations';
 import { useSearchParams } from 'next/navigation';
 import { useEffect, useState } from 'react';

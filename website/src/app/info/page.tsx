@@ -1,7 +1,7 @@
 "use client"
 import { useEffect, useRef, useState } from "react";
 import { getUserData, updateUserData } from "../../utils/mockData/mockInfo";
-import Timer from "@/components/timer";
+import Timer from "@/components/info/timer";
 
 export default function Info() {
   const [isInfoUpdating, setIsInfoUpdating] = useState(false)
